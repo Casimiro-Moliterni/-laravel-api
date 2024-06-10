@@ -1,10 +1,21 @@
-I task da svolgere sono diversi, ma alcuni di essi sono un ripasso di ciò che abbiamo fatto nelle lezioni dei giorni scorsi:
-- creare la migration per la tabella types
-- creare il model Type
-- creare la migration di modifica per la tabella projects per aggiungere la chiave esterna
-- aggiungere ai model Type e Project i metodi per definire la relazione one to many
-- visualizzare nella pagina di dettaglio di un progetto la tipologia associata, se presente
-- permettere all’utente di associare una tipologia nella pagina di creazione e modifica di un progetto
-- gestire il salvataggio dell’associazione progetto-tipologia con opportune regole di validazione
-Bonus:
-creare il seeder per il model Type.
+# Milestone 1
+nome repo 1: laravel-api
+Aggiungiamo al nostro progetto Laravel una nuovo Api/ProjectController. Questo controller risponderà a delle richieste via API e si occuperà di restituire la lista dei progetti presenti nel database in formato json.
+
+# Milestone 2
+Testiamo la chiamata API tramite Postman e assicuriamoci di ricevere i dati correttamente.
+
+# Milestone 3
+nome repo 2: vite-boolfolio
+Iniziamo ad occuparci della parte front-office della nostra applicazione: creiamo un nuovo progetto Vue 3 con Vite e installiamo axios.
+Colleghiamo questo progetto ad una repo separata.
+
+# Milestone 4
+Nel componente principale della nostra Vue App facciamo una chiamata API all’endpoint costruito nel progetto Laravel (milestone 1) e recuperiamo tutti i progetti dal nostro back-end.
+Stampiamo in console i risultati e verifichiamo di ricevere i dati correttamente.
+
+# Milestone 5
+Creiamo un nuovo componente ProjectCard, che corrisponde ad una card per visualizzare un progetto. Utilizziamo questo componente per visualizzare tutti i progetti ricevuti tramite API.
+
+# Bonus:
+Gestire la paginazione dei risultati
