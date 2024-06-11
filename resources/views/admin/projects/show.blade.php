@@ -4,6 +4,11 @@
     <div>
         <strong>Slug :</strong>{{ $project->slug }}
     </div>
+    @if($project->client_name)
+    <div>
+        <strong>Client_name:</strong>{{$project->client_name  }}
+    </div>
+    @endif
     @if ($project->type)
         <div>
             <strong>Types:</strong>{{ $project->type->name }}

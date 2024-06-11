@@ -21,6 +21,11 @@
                     value="{{ old('name', $project->name) }}">
             </div>
             <div class="mb-3">
+                <label for="client_name" class="form-label">client_name</label>
+                <input type="text" class="form-control" id="client_name"  name="client_name"
+                    value="{{ old('client_name', $project->client_name) }}">
+            </div>
+            <div class="mb-3">
                 <label for="type_id" class="form-label">Types</label>
                 <select class="form-select" aria-label="Default select example" id="type_id" name="type_id">
                     <option value="">Open this select menu</option>
@@ -32,10 +37,8 @@
             <h5>Technologies</h5>
             @foreach ($technologies as $technology)
                 <div class="mb-3">
-                    <input class="form-check-input "  type="checkbox"
-                    @checked(in_array($technology->id , old('technologies',[])))
-                     value="{{ $technology->id }}" 
-                     id="technology-{{ $technology->id }}" name=" technologies[] ">
+                    <input class="form-check-input " type="checkbox" @checked(in_array($technology->id, old('technologies', [])))
+                        value="{{ $technology->id }}" id="technology-{{ $technology->id }}" name=" technologies[] ">
                     <label class="form-check-label" for="technology-{{ $technology->id }}">
                         {{ $technology->name }}
                     </label>
