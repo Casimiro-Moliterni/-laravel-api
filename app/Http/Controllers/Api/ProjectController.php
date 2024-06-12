@@ -23,15 +23,15 @@ class ProjectController extends Controller
     public function show($slug)
     {
         $project = Project::where('slug', '=', $slug)->with('type', 'technologies')->first();
-
+        $data=[];
         if ($project) {
             $data = [
-                'success' => 'true',
-                'results' => $project
+                'success' => true,
+                'project' => $project
             ];
         } else {
             $data = [
-                'success' => 'false',
+                'success' => false,
                 'results' => 'Not Found'
             ];
         }
