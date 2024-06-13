@@ -8,6 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Mail\Mailables\Content;
 use Illuminate\Mail\Mailables\Envelope;
 use Illuminate\Queue\SerializesModels;
+
 class NewContact extends Mailable
 {
     use Queueable, SerializesModels;
@@ -31,8 +32,7 @@ class NewContact extends Mailable
     public function envelope()
     {
         return new Envelope(
-            replyTo:$this->lead->email,
-            subject: 'New Email for Contact',
+            subject: 'New Contact',
         );
     }
 

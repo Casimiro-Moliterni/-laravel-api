@@ -36,7 +36,8 @@ class LeadController extends Controller
         $newLead->save();
         
         // invio email 
-        Mail::to('adminproject@gmail.com')->send(new NewContact($newLead));
+        Mail::to('admin@boolpress.com')->send(new NewContact($newLead));
+
 
         // ritorno success json 
         return response()->json([
